@@ -33,6 +33,12 @@ npm run dev
 
 Use `npm test` for the production build and server-rendered acceptance test.
 
+## Cloudflare deployment
+
+The repository includes a production Worker manifest and scripts for Cloudflare
+deployment. See [CLOUDFLARE_DEPLOYMENT.md](./CLOUDFLARE_DEPLOYMENT.md) for the
+GitHub connection settings and local deployment commands.
+
 ## Compatibility note
 
 CSV and XLSX downloads are implemented. A real Bizsuite import test should confirm which format is preferred before the application labels one as the default production format. Existing undocumented `combo` products are detected and blocked from export until compatibility is confirmed.
