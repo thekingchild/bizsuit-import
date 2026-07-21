@@ -24,6 +24,7 @@ test("server-renders the Bizsuite import workspace", async () => {
   assert.match(html, /Required for every product/);
   assert.match(html, /Product name/);
   assert.match(html, /Manage stock/);
+  assert.match(html, /Start from template/);
   assert.match(html, /Download Excel/);
   assert.doesNotMatch(html, /codex-preview|react-loading-skeleton|Your site is taking shape/i);
 });

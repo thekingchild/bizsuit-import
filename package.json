@@ -12,8 +12,9 @@
     "cf:preview": "npm run build && wrangler dev --no-bundle --cwd cloudflare --config wrangler.jsonc",
     "cf:deploy": "npm run build && wrangler deploy --no-bundle --cwd cloudflare --config wrangler.jsonc",
     "cf:deploy:dry-run": "npm run build && wrangler deploy --dry-run --no-bundle --cwd cloudflare --config wrangler.jsonc",
-    "test": "npm run build && node --test tests/rendered-html.test.mjs",
+    "test": "npm run build && npm run catalogue:validate && node --test tests/*.test.mjs",
     "lint": "eslint . --ignore-pattern dist --ignore-pattern .next",
+    "catalogue:validate": "node scripts/validate-catalogue.mjs",
     "db:generate": "drizzle-kit generate"
   },
   "dependencies": {

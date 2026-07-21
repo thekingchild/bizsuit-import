@@ -13,6 +13,19 @@ A private, browser-based workspace for preparing and validating Bizsuite product
 - CSV and XLSX downloads.
 - IndexedDB draft autosave; product data remains on the device.
 - Pagination designed for large catalogues.
+- Versioned Nigerian quick-start catalogue packs with source evidence and staged product coverage.
+
+## Quick-start catalogue
+
+Use **Start from template** to browse reviewed Nigerian supermarket products, filter by category, and add selected items to the workspace. Template products include source-backed names, brands, pack units, categories, short descriptions, and optional verified barcodes. Store-specific fields remain blank and appear as **Needs setup** until completed.
+
+Catalogue delivery is staged:
+
+- Mini Market 400: reviewed preview available and expanding toward 400 products.
+- Supermarket 1,000: planned after the 400-product pack is reviewed.
+- Supermarket 2,000: planned after the 1,000-product pack is reviewed.
+
+The files under `public/catalogue/` are static, versioned assets. This preserves the client-only architecture: selection, editing, draft saving, validation, and export all stay in the browser. Run `npm run catalogue:validate` after changing a catalogue file. The validator checks source evidence, counts, duplicate IDs and barcodes, supported barcode types, and GS1 check digits.
 
 ## Required product fields
 

@@ -18,8 +18,10 @@ import {
   type Variation,
 } from "@/lib/bizsuite";
 import { clearDraft, loadDraft, saveDraft } from "@/lib/draft-storage";
+import { catalogueItemToProduct, type CatalogueItem } from "@/lib/catalogue";
+import { TemplateCatalogueModal } from "./TemplateCatalogueModal";
 
-type RowFilter = "all" | "errors" | "warnings" | "ready" | "variable";
+type RowFilter = "all" | "errors" | "setup" | "warnings" | "ready" | "variable";
 
 interface PendingImport {
   sourceName: string;
@@ -34,8 +36,8 @@ function hasFieldIssue(issues: ValidationIssue[], field: CanonicalField) {
   return issues.some((issue) => issue.severity === "error" && issue.field === field);
 }
 
-function statusFor(issues: ValidationIssue[]) {
-  if (issues.some((issue) => issue.severity === "error")) return "error";
+function statusFor(issues: ValidationIssue[], fromTemplate = false) {
+  if (issues.some((issue) => issue.severity === "error")) return fromTemplate ? "setup" : "error";
   if (issues.some((issue) => issue.severity === "warning")) return "warning";
   return "ready";
 }
@@ -48,13 +50,6 @@ function FieldHint({ children }: { children: React.ReactNode }) {
   return <span className="field-hint">{children}</span>;
 }
 
-function currencyValue(value: string) {
-  const number = Number(value);
-  return value && Number.isFinite(number)
-    ? new Intl.NumberFormat("en-NG", { maximumFractionDigits: 2 }).format(number)
-    : value;
-}
-
 export function ImporterApp() {
   const [products, setProducts] = useState<Product[]>([createProduct()]);
   const [draftReady, setDraftReady] = useState(false);
@@ -64,6 +59,7 @@ export function ImporterApp() {
   const [search, setSearch] = useState("");
   const [page, setPage] = useState(1);
   const [showPaste, setShowPaste] = useState(false);
+  const [showTemplates, setShowTemplates] = useState(false);
   const [pasteValue, setPasteValue] = useState("");
   const [pendingImport, setPendingImport] = useState<PendingImport | null>(null);
   const [showPreflight, setShowPreflight] = useState(false);
@@ -81,13 +77,16 @@ export function ImporterApp() {
 
   useEffect(() => {
     if (!draftReady) return;
-    setSaveState("saving");
+    const savingTimer = window.setTimeout(() => setSaveState("saving"), 0);
     const timer = window.setTimeout(() => {
       saveDraft(products)
         .then(() => setSaveState("saved"))
         .catch(() => setNotice("Your draft could not be saved locally."));
     }, 650);
-    return () => window.clearTimeout(timer);
+    return () => {
+      window.clearTimeout(savingTimer);
+      window.clearTimeout(timer);
+    };
   }, [products, draftReady]);
 
   const duplicateSkus = useMemo(() => duplicateSkuIssues(products), [products]);
@@ -111,20 +110,24 @@ export function ImporterApp() {
     let warnings = 0;
     let ready = 0;
     for (const product of products) {
-      const status = statusFor(issuesById.get(product.id) ?? []);
-      if (status === "error") errors += 1;
-      else if (status === "warning") warnings += 1;
+      const issues = issuesById.get(product.id) ?? [];
+      if (issues.some((issue) => issue.severity === "error")) errors += 1;
+      else if (issues.some((issue) => issue.severity === "warning")) warnings += 1;
       else ready += 1;
     }
-    return { errors, warnings, ready, total: products.length };
+    const setup = products.filter((product) => product.template && statusFor(issuesById.get(product.id) ?? [], true) === "setup").length;
+    const manualErrors = products.filter((product) => !product.template && (issuesById.get(product.id) ?? []).some((issue) => issue.severity === "error")).length;
+    return { errors, setup, manualErrors, warnings, ready, total: products.length };
   }, [issuesById, products]);
 
   const filteredProducts = useMemo(() => {
     const query = search.trim().toLowerCase();
     return products.filter((product) => {
-      const status = statusFor(issuesById.get(product.id) ?? []);
+      const issues = issuesById.get(product.id) ?? [];
+      const status = statusFor(issues, Boolean(product.template));
       const matchesFilter =
         filter === "all" ||
+        (filter === "errors" && !product.template && issues.some((issue) => issue.severity === "error")) ||
         filter === status ||
         (filter === "variable" && product.productType === "variable");
       const matchesSearch =
@@ -140,10 +143,6 @@ export function ImporterApp() {
   const pageCount = Math.max(1, Math.ceil(filteredProducts.length / PAGE_SIZE));
   const visibleProducts = filteredProducts.slice((page - 1) * PAGE_SIZE, page * PAGE_SIZE);
   const selectedProduct = products.find((product) => product.id === selectedId) ?? null;
-
-  useEffect(() => {
-    setPage(1);
-  }, [filter, search]);
 
   const updateProduct = useCallback((id: string, patch: Partial<Product>) => {
     setProducts((current) => current.map((product) => (product.id === id ? { ...product, ...patch } : product)));
@@ -161,6 +160,7 @@ export function ImporterApp() {
     const copy = createProduct({
       ...product,
       id: undefined,
+      template: undefined,
       name: `${product.name} copy`.trim(),
       sku: "",
       variations: product.variations.map((variation) => createVariation({ ...variation, id: undefined, sku: "" })),
@@ -175,6 +175,36 @@ export function ImporterApp() {
       return next.length ? next : [createProduct()];
     });
     setSelectedId(null);
+  }
+
+  function acceptTemplate(items: CatalogueItem[], packId: string, catalogueVersion: string, mode: "append" | "replace") {
+    const imported = items.map((item) => catalogueItemToProduct(item, packId, catalogueVersion));
+    let skipped = 0;
+    let nextProducts = imported;
+    if (mode === "append") {
+      const isOnlyBlankRow = products.length === 1 && !products[0].name.trim() && !products[0].sku.trim();
+      const base = isOnlyBlankRow ? [] : products;
+      const existingKeys = new Set(base.map((product) => product.sku.trim()
+        ? `sku:${product.sku.trim().toLowerCase()}`
+        : `name:${product.brand.trim().toLowerCase()}|${product.name.trim().toLowerCase()}`));
+      const unique = imported.filter((product) => {
+        const key = product.sku.trim()
+          ? `sku:${product.sku.trim().toLowerCase()}`
+          : `name:${product.brand.trim().toLowerCase()}|${product.name.trim().toLowerCase()}`;
+        if (existingKeys.has(key)) {
+          skipped += 1;
+          return false;
+        }
+        existingKeys.add(key);
+        return true;
+      });
+      nextProducts = [...base, ...unique];
+    }
+    setProducts(nextProducts);
+    setShowTemplates(false);
+    setFilter("setup");
+    setPage(1);
+    setNotice(`${(items.length - skipped).toLocaleString()} template products added${skipped ? `; ${skipped} duplicates skipped` : ""}. Add prices and the remaining store settings.`);
   }
 
   async function parseWorkbook(sourceName: string, input: ArrayBuffer | string, type: "array" | "string") {
@@ -341,13 +371,14 @@ export function ImporterApp() {
             <strong>Required for every product</strong>
             <p>Name, unit, manage stock, selling price tax type, product type, and at least one purchase price. Variable products also need a variation name and values.</p>
           </div>
-          <button onClick={() => { setFilter("errors"); setShowPreflight(true); }}>Review missing fields</button>
+          <button onClick={() => { setFilter("errors"); setPage(1); setShowPreflight(true); }}>Review missing fields</button>
         </section>
 
         <section className="workspace-card">
           <div className="workspace-toolbar">
             <div className="primary-actions">
               <button className="primary-button" onClick={() => addProduct()}><span>＋</span> Add product</button>
+              <button className="template-button" onClick={() => setShowTemplates(true)}><span>✦</span> Start from template</button>
               <button className="secondary-button" onClick={() => setShowPaste(true)}>Paste table</button>
               <button className="secondary-button" onClick={() => fileInput.current?.click()}>Upload file</button>
               <input
@@ -376,13 +407,14 @@ export function ImporterApp() {
           <div className="table-controls">
             <label className="search-box">
               <span>⌕</span>
-              <input value={search} onChange={(event) => setSearch(event.target.value)} placeholder="Search product, SKU, brand…" />
+              <input value={search} onChange={(event) => { setSearch(event.target.value); setPage(1); }} placeholder="Search product, SKU, brand…" />
             </label>
             <div className="filter-tabs" role="tablist" aria-label="Product filters">
-              {(["all", "errors", "warnings", "ready", "variable"] as RowFilter[]).map((item) => (
-                <button key={item} className={filter === item ? "active" : ""} onClick={() => setFilter(item)}>
-                  {item === "all" ? "All products" : item[0].toUpperCase() + item.slice(1)}
-                  {item === "errors" && totals.errors > 0 ? <span>{totals.errors}</span> : null}
+              {(["all", "setup", "errors", "warnings", "ready", "variable"] as RowFilter[]).map((item) => (
+                <button key={item} className={filter === item ? "active" : ""} onClick={() => { setFilter(item); setPage(1); }}>
+                  {item === "all" ? "All products" : item === "setup" ? "Needs setup" : item[0].toUpperCase() + item.slice(1)}
+                  {item === "setup" && totals.setup > 0 ? <span>{totals.setup}</span> : null}
+                  {item === "errors" && totals.manualErrors > 0 ? <span>{totals.manualErrors}</span> : null}
                 </button>
               ))}
             </div>
@@ -407,15 +439,15 @@ export function ImporterApp() {
               <tbody>
                 {visibleProducts.map((product, index) => {
                   const issues = issuesById.get(product.id) ?? [];
-                  const status = statusFor(issues);
+                  const status = statusFor(issues, Boolean(product.template));
                   const purchaseDisplay = product.productType === "variable"
                     ? `${product.variations.length || 0} variation${product.variations.length === 1 ? "" : "s"}`
                     : product.purchasePriceIncludingTax || product.purchasePriceExcludingTax;
                   return (
-                    <tr key={product.id} className={status === "error" ? "row-error" : ""}>
+                    <tr key={product.id} className={status === "error" || status === "setup" ? "row-error" : ""}>
                       <td className="status-column">
                         <span className={`row-status ${status}`} title={issues.map((issue) => issue.message).join("\n")}>
-                          {status === "ready" ? "✓" : status === "warning" ? "!" : "×"}
+                          {status === "ready" ? "✓" : status === "warning" ? "!" : status === "setup" ? "…" : "×"}
                         </span>
                         <small>{(page - 1) * PAGE_SIZE + index + 1}</small>
                       </td>
@@ -561,6 +593,8 @@ export function ImporterApp() {
         </div>
       ) : null}
 
+      {showTemplates ? <TemplateCatalogueModal onClose={() => setShowTemplates(false)} onImport={acceptTemplate} /> : null}
+
       {pendingImport ? (
         <MappingModal
           pending={pendingImport}
@@ -657,7 +691,8 @@ function PreflightPanel({ products, issuesById, totals, onClose, onOpenProduct, 
         {affected.length ? (
           <section className="affected-list"><h3>Affected products</h3>{affected.slice(0, 50).map((product, index) => {
             const issues = issuesById.get(product.id) ?? [];
-            return <button key={product.id} onClick={() => onOpenProduct(product.id)}><span className={`row-status ${statusFor(issues)}`}>{statusFor(issues) === "error" ? "×" : "!"}</span><div><strong>{product.name || `Product ${index + 1}`}</strong><small>{issues[0]?.message}</small></div><span>›</span></button>;
+            const status = statusFor(issues, Boolean(product.template));
+            return <button key={product.id} onClick={() => onOpenProduct(product.id)}><span className={`row-status ${status}`}>{status === "error" ? "×" : status === "setup" ? "…" : "!"}</span><div><strong>{product.name || `Product ${index + 1}`}</strong><small>{issues[0]?.message}</small></div><span>›</span></button>;
           })}</section>
         ) : null}
         <div className="panel-footer"><p>{totals.errors ? "Download unlocks automatically when all blocking errors are fixed." : "Choose the file format accepted by your Bizsuite importer."}</p><div><button disabled={busy || totals.errors > 0} onClick={() => onExport("csv")}>Download CSV</button><button className="primary-button" disabled={busy || totals.errors > 0} onClick={() => onExport("xlsx")}>Download Excel</button></div></div>

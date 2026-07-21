@@ -1,0 +1,33 @@
+{
+  "version": "2026.07-preview.1",
+  "updatedAt": "2026-07-21",
+  "methodology": "Popularity is a transparent proxy based on current Nigerian retailer presence, retailer prominence or ranking, review volume where published, manufacturer and brand presence, and importance to a typical supermarket category.",
+  "attribution": "Product names and pack facts are source-referenced. Descriptions are original summaries. Barcodes are optional and are included only when separately verified; no barcode is inferred from a retailer SKU.",
+  "packs": [
+    {
+      "id": "mini-market-400",
+      "name": "Mini Market 400",
+      "description": "A staged Nigerian essentials catalogue. The reviewed preview is available while research continues toward 400 products.",
+      "targetCount": 400,
+      "availableCount": 26,
+      "status": "preview",
+      "path": "/catalogue/2026.07-preview.1/mini-market-400.json"
+    },
+    {
+      "id": "supermarket-1000",
+      "name": "Supermarket 1,000",
+      "description": "Broader brand, pack-size, household, personal-care, and regional coverage.",
+      "targetCount": 1000,
+      "availableCount": 0,
+      "status": "planned"
+    },
+    {
+      "id": "supermarket-2000",
+      "name": "Supermarket 2,000",
+      "description": "The full staged catalogue with deeper category and variation coverage.",
+      "targetCount": 2000,
+      "availableCount": 0,
+      "status": "planned"
+    }
+  ]
+}

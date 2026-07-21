@@ -93,6 +93,14 @@ export interface Variation {
   openingStock: string;
 }
 
+export interface ProductTemplateMetadata {
+  catalogueItemId: string;
+  packId: string;
+  catalogueVersion: string;
+  barcodeVerification: "verified" | "corroborated" | "not-supplied";
+  importedAt: string;
+}
+
 export interface Product {
   id: string;
   name: string;
@@ -131,6 +139,7 @@ export interface Product {
   customField4: string;
   notForSelling: boolean | null;
   productLocations: string;
+  template?: ProductTemplateMetadata;
 }
 
 export interface ValidationIssue {
@@ -532,4 +541,3 @@ export function duplicateSkuIssues(products: Product[]) {
   }
   return new Set([...counts.entries()].filter(([, count]) => count > 1).map(([sku]) => sku));
 }
-
