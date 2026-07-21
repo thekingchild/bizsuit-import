@@ -13,19 +13,19 @@ A private, browser-based workspace for preparing and validating Bizsuite product
 - CSV and XLSX downloads.
 - IndexedDB draft autosave; product data remains on the device.
 - Pagination designed for large catalogues.
-- Versioned Nigerian quick-start catalogue packs with source evidence and staged product coverage.
+- Versioned Nigerian quick-start catalogue packs with official retailer evidence and staged product coverage.
 
 ## Quick-start catalogue
 
-Use **Start from template** to browse reviewed Nigerian supermarket products, filter by category, and add selected items to the workspace. Template products include source-backed names, brands, pack units, categories, short descriptions, and optional verified barcodes. Store-specific fields remain blank and appear as **Needs setup** until completed.
+Use **Start from template** to browse Nigerian supermarket products gathered from official retailer pages, filter by category, and add selected items to the workspace. Template products include source-backed names, brands, pack units, categories, short descriptions, and optional verified barcodes. Store-specific fields remain blank and appear as **Needs setup** until completed.
 
 Catalogue delivery is staged:
 
-- Mini Market 400: reviewed preview available and expanding toward 400 products.
-- Supermarket 1,000: planned after the 400-product pack is reviewed.
+- Mini Market 400: available with 400 products suited to mini-market setup.
+- Supermarket 1,000: available with broader department coverage.
 - Supermarket 2,000: planned after the 1,000-product pack is reviewed.
 
-The files under `public/catalogue/` are static, versioned assets. This preserves the client-only architecture: selection, editing, draft saving, validation, and export all stay in the browser. Run `npm run catalogue:validate` after changing a catalogue file. The validator checks source evidence, counts, duplicate IDs and barcodes, supported barcode types, and GS1 check digits.
+The files under `public/catalogue/` are static, versioned assets. This preserves the client-only architecture: selection, editing, draft saving, validation, and export all stay in the browser. Run `npm run catalogue:build` to regenerate the 400-product and 1,000-product packs from the current retailer pages, then `npm run catalogue:validate` to verify the generated files. The validator checks source evidence, counts, duplicate IDs and barcodes within each pack, supported barcode types, and GS1 check digits.
 
 ## Required product fields
 

@@ -45,7 +45,6 @@ export async function validateCatalogue() {
   assert.ok(manifest.methodology.length >= 80, "Manifest needs a documented popularity methodology");
   assert.ok(Array.isArray(manifest.packs) && manifest.packs.length >= 3, "All three catalogue stages must be declared");
 
-  const ids = new Set();
   const barcodes = new Set();
   let itemCount = 0;
 
@@ -60,11 +59,13 @@ export async function validateCatalogue() {
     assert.equal(data.packId, pack.id, `${pack.id}: pack ID mismatch`);
     assert.equal(data.catalogueVersion, manifest.version, `${pack.id}: version mismatch`);
     assert.equal(data.items.length, pack.availableCount, `${pack.id}: manifest count mismatch`);
+    const packIds = new Set();
+    const packBarcodes = new Set();
 
     for (const item of data.items) {
       itemCount += 1;
-      assert.ok(!ids.has(item.id), `${item.id}: duplicate catalogue item ID`);
-      ids.add(item.id);
+      assert.ok(!packIds.has(item.id), `${pack.id}: duplicate catalogue item ID ${item.id}`);
+      packIds.add(item.id);
       for (const field of ["name", "brand", "unit", "category", "subCategory", "description"]) {
         assert.equal(typeof item[field], "string", `${item.id}: ${field} must be text`);
         assert.ok(item[field].trim(), `${item.id}: ${field} is required`);
@@ -82,7 +83,8 @@ export async function validateCatalogue() {
       if (item.barcode) {
         assert.ok(barcodeTypes.has(item.barcode.type), `${item.id}: unsupported barcode type`);
         assert.ok(validateBarcode(item.barcode.value, item.barcode.type), `${item.id}: invalid ${item.barcode.type} barcode`);
-        assert.ok(!barcodes.has(item.barcode.value), `${item.id}: duplicate barcode`);
+        assert.ok(!packBarcodes.has(item.barcode.value), `${pack.id}: duplicate barcode ${item.barcode.value}`);
+        packBarcodes.add(item.barcode.value);
         barcodes.add(item.barcode.value);
         assert.ok(["verified", "corroborated"].includes(item.barcode.verification), `${item.id}: invalid barcode verification state`);
         assert.match(item.barcode.sourceUrl, /^https:\/\//, `${item.id}: barcode source is required`);

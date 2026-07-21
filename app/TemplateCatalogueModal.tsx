@@ -107,7 +107,7 @@ export function TemplateCatalogueModal({ onClose, onImport }: {
           <div>
             <p className="eyebrow">QUICK START CATALOGUE</p>
             <h2 id="template-title">Start with products Nigerians already buy</h2>
-            <p>Choose reviewed products, then add your prices, stock settings, tax type, and locations.</p>
+            <p>Choose source-backed supermarket products, then add your prices, stock settings, tax type, and locations.</p>
           </div>
           <button className="close-button" onClick={onClose} aria-label="Close template catalogue">×</button>
         </div>
@@ -122,11 +122,11 @@ export function TemplateCatalogueModal({ onClose, onImport }: {
                 disabled={!pack.path}
                 onClick={() => void loadPack(pack)}
               >
-                <span><strong>{pack.name}</strong><small>{pack.availableCount.toLocaleString()} reviewed of {pack.targetCount.toLocaleString()}</small></span>
+                <span><strong>{pack.name}</strong><small>{pack.availableCount.toLocaleString()} available of {pack.targetCount.toLocaleString()}</small></span>
                 <em className={`pack-status ${pack.status}`}>{pack.status === "preview" ? "Preview" : pack.status === "available" ? "Ready" : "Planned"}</em>
               </button>
             ))}
-            {manifest ? <div className="method-note"><strong>How "top" is determined</strong><p>{manifest.methodology}</p><small>Catalogue version {manifest.version} · reviewed {manifest.updatedAt}</small></div> : null}
+            {manifest ? <div className="method-note"><strong>How products are included</strong><p>{manifest.methodology}</p><small>Catalogue version {manifest.version} · reviewed {manifest.updatedAt}</small></div> : null}
           </aside>
 
           <div className="template-browser">
@@ -140,12 +140,12 @@ export function TemplateCatalogueModal({ onClose, onImport }: {
 
             {activePack ? <div className="pack-summary"><div><strong>{activePack.name}</strong><p>{activePack.description}</p></div><span>{packData?.items.length ?? activePack.availableCount} available</span></div> : null}
 
-            {loading ? <div className="template-state">Loading reviewed products…</div> : null}
+            {loading ? <div className="template-state">Loading supermarket products…</div> : null}
             {error ? <div className="template-state error"><strong>Catalogue unavailable</strong><span>{error}</span></div> : null}
             {!loading && !error && packData ? (
               <>
                 <div className="template-select-row">
-                  <label><input type="checkbox" checked={filteredItems.length > 0 && filteredItems.every((item) => selected.has(item.id))} onChange={toggleVisible} /> Select {filteredItems.length === packData.items.length ? "all reviewed products" : `${filteredItems.length} shown`}</label>
+                  <label><input type="checkbox" checked={filteredItems.length > 0 && filteredItems.every((item) => selected.has(item.id))} onChange={toggleVisible} /> Select {filteredItems.length === packData.items.length ? "all products" : `${filteredItems.length} shown`}</label>
                   <span>{selected.size.toLocaleString()} selected</span>
                 </div>
                 <div className="template-product-list">
@@ -159,13 +159,13 @@ export function TemplateCatalogueModal({ onClose, onImport }: {
                       </div>
                       <div className="template-evidence">
                         <span className={`barcode-chip ${item.barcode ? "verified" : "missing"}`}>{item.barcode ? `${item.barcode.type} verified` : "Barcode not supplied"}</span>
-                        <strong>{item.popularityScore}/100</strong>
-                        <small>popularity proxy</small>
+                        <strong>{item.sources.length.toLocaleString()} source{item.sources.length === 1 ? "" : "s"}</strong>
+                        <small>official retailer listing</small>
                         <a href={item.sources[0]?.url} target="_blank" rel="noreferrer">View source</a>
                       </div>
                     </article>
                   ))}
-                  {!filteredItems.length ? <div className="template-state">No reviewed products match this search.</div> : null}
+                  {!filteredItems.length ? <div className="template-state">No products match this search.</div> : null}
                 </div>
               </>
             ) : null}

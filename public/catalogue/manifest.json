@@ -1,25 +1,26 @@
 {
   "version": "2026.07-preview.1",
   "updatedAt": "2026-07-21",
-  "methodology": "Popularity is a transparent proxy based on current Nigerian supermarket and store presence, recurrence across Shoprite, Addide, Prince Ebeano, and SPAR listings, brand familiarity, pack-size breadth, and importance to a typical supermarket category.",
+  "methodology": "Products are included when they appear on official Nigerian supermarket or store department pages. The catalogue aims for broad retail coverage across Addide and SPAR Nigeria and does not rank items by popularity.",
   "attribution": "Product names and pack facts are source-referenced. Descriptions are original summaries. Barcodes are optional and are included only when separately verified; no barcode is inferred from a retailer SKU.",
   "packs": [
     {
       "id": "mini-market-400",
       "name": "Mini Market 400",
-      "description": "A staged Nigerian essentials catalogue with reviewed products sourced across current Nigerian supermarkets while research continues toward 400 products.",
+      "description": "A 400-product Nigerian mini-market template built from current official supermarket listings without popularity ranking.",
       "targetCount": 400,
-      "availableCount": 50,
-      "status": "preview",
+      "availableCount": 400,
+      "status": "available",
       "path": "/catalogue/2026.07-preview.1/mini-market-400.json"
     },
     {
       "id": "supermarket-1000",
       "name": "Supermarket 1,000",
-      "description": "Broader brand, pack-size, household, personal-care, and regional coverage.",
+      "description": "A 1,000-product Nigerian supermarket template with broader department coverage from official retailer listings.",
       "targetCount": 1000,
-      "availableCount": 0,
-      "status": "planned"
+      "availableCount": 1000,
+      "status": "available",
+      "path": "/catalogue/2026.07-preview.1/supermarket-1000.json"
     },
     {
       "id": "supermarket-2000",

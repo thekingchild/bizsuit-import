@@ -14,6 +14,7 @@
     "cf:deploy:dry-run": "npm run build && wrangler deploy --dry-run --no-bundle --cwd cloudflare --config wrangler.jsonc",
     "test": "npm run build && npm run catalogue:validate && node --test tests/*.test.mjs",
     "lint": "eslint . --ignore-pattern dist --ignore-pattern .next",
+    "catalogue:build": "node scripts/build-catalogue.mjs",
     "catalogue:validate": "node scripts/validate-catalogue.mjs",
     "db:generate": "drizzle-kit generate"
   },
