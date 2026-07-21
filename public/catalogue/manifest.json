@@ -1,15 +1,15 @@
 {
   "version": "2026.07-preview.1",
   "updatedAt": "2026-07-21",
-  "methodology": "Popularity is a transparent proxy based on current Nigerian retailer presence, retailer prominence or ranking, review volume where published, manufacturer and brand presence, and importance to a typical supermarket category.",
+  "methodology": "Popularity is a transparent proxy based on current Nigerian supermarket and store presence, recurrence across Shoprite, Addide, Prince Ebeano, and SPAR listings, brand familiarity, pack-size breadth, and importance to a typical supermarket category.",
   "attribution": "Product names and pack facts are source-referenced. Descriptions are original summaries. Barcodes are optional and are included only when separately verified; no barcode is inferred from a retailer SKU.",
   "packs": [
     {
       "id": "mini-market-400",
       "name": "Mini Market 400",
-      "description": "A staged Nigerian essentials catalogue. The reviewed preview is available while research continues toward 400 products.",
+      "description": "A staged Nigerian essentials catalogue with reviewed products sourced across current Nigerian supermarkets while research continues toward 400 products.",
       "targetCount": 400,
-      "availableCount": 26,
+      "availableCount": 50,
       "status": "preview",
       "path": "/catalogue/2026.07-preview.1/mini-market-400.json"
     },

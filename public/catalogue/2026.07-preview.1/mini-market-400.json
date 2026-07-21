@@ -4,16 +4,23 @@
   "items": [
     {
       "id": "blue-band-spread-900g",
-      "name": "Blue Band Spread for Bread 900 g",
+      "name": "Blue Band Spread For Bread 900 g",
       "brand": "Blue Band",
       "unit": "Pack",
       "category": "Food Cupboard",
       "subCategory": "Butter & Margarine",
       "description": "A 900 g pack of Blue Band spread for bread and everyday meal preparation.",
       "productType": "single",
-      "popularityScore": 78,
-      "popularityEvidence": ["Listed in Shoprite Nigeria's food catalogue", "Established everyday spread category"],
-      "sources": [{"label":"Shoprite Nigeria food catalogue","url":"https://shoprite.ng/food/","checkedAt":"2026-07-20","evidence":"Product and pack-size presence"}]
+      "popularityScore": 84,
+      "popularityEvidence": ["Listed on Shoprite Nigeria's food catalogue", "Everyday breakfast and sandwich staple"],
+      "sources": [
+        {
+          "label": "Shoprite Nigeria food catalogue",
+          "url": "https://shoprite.ng/food/",
+          "checkedAt": "2026-07-21",
+          "evidence": "Food catalogue lists Blue Band Spread For Bread 12x900G."
+        }
+      ]
     },
     {
       "id": "arla-salted-butter-200g",
@@ -24,9 +31,16 @@
       "subCategory": "Butter & Margarine",
       "description": "A 200 g brick of salted Arla butter for spreading, cooking, and baking.",
       "productType": "single",
-      "popularityScore": 70,
-      "popularityEvidence": ["Listed in Shoprite Nigeria's food catalogue", "Core dairy category"],
-      "sources": [{"label":"Shoprite Nigeria food catalogue","url":"https://shoprite.ng/food/","checkedAt":"2026-07-20","evidence":"Product and pack-size presence"}]
+      "popularityScore": 74,
+      "popularityEvidence": ["Listed on Shoprite Nigeria's food catalogue", "Common dairy shelf product"],
+      "sources": [
+        {
+          "label": "Shoprite Nigeria food catalogue",
+          "url": "https://shoprite.ng/food/",
+          "checkedAt": "2026-07-21",
+          "evidence": "Food catalogue lists Butter Salted Arla 200G Brick."
+        }
+      ]
     },
     {
       "id": "arla-unsalted-butter-200g",
@@ -37,9 +51,16 @@
       "subCategory": "Butter & Margarine",
       "description": "A 200 g brick of unsalted Arla butter for cooking, baking, and spreading.",
       "productType": "single",
-      "popularityScore": 68,
-      "popularityEvidence": ["Listed in Shoprite Nigeria's food catalogue", "Core dairy category"],
-      "sources": [{"label":"Shoprite Nigeria food catalogue","url":"https://shoprite.ng/food/","checkedAt":"2026-07-20","evidence":"Product and pack-size presence"}]
+      "popularityScore": 72,
+      "popularityEvidence": ["Listed on Shoprite Nigeria's food catalogue", "Standard unsalted butter option"],
+      "sources": [
+        {
+          "label": "Shoprite Nigeria food catalogue",
+          "url": "https://shoprite.ng/food/",
+          "checkedAt": "2026-07-21",
+          "evidence": "Food catalogue lists Butter Unsalted Arla 200G Brick."
+        }
+      ]
     },
     {
       "id": "complan-original-450g",
@@ -50,9 +71,16 @@
       "subCategory": "Malted & Nutrition Drinks",
       "description": "A 450 g box of Complan powdered nutrition drink in the original variety.",
       "productType": "single",
-      "popularityScore": 67,
-      "popularityEvidence": ["Listed in Shoprite Nigeria's food catalogue", "Recognised nutrition-drink brand"],
-      "sources": [{"label":"Shoprite Nigeria food catalogue","url":"https://shoprite.ng/food/","checkedAt":"2026-07-20","evidence":"Product and pack-size presence"}]
+      "popularityScore": 69,
+      "popularityEvidence": ["Listed on Shoprite Nigeria's food catalogue", "Recognised nutrition-drink line"],
+      "sources": [
+        {
+          "label": "Shoprite Nigeria food catalogue",
+          "url": "https://shoprite.ng/food/",
+          "checkedAt": "2026-07-21",
+          "evidence": "Food catalogue lists Complan 450G Box."
+        }
+      ]
     },
     {
       "id": "complan-chocolate-450g",
@@ -63,9 +91,16 @@
       "subCategory": "Malted & Nutrition Drinks",
       "description": "A 450 g box of chocolate-flavoured Complan powdered nutrition drink.",
       "productType": "single",
-      "popularityScore": 69,
-      "popularityEvidence": ["Listed in Shoprite Nigeria's food catalogue", "Recognised nutrition-drink brand and flavour variation"],
-      "sources": [{"label":"Shoprite Nigeria food catalogue","url":"https://shoprite.ng/food/","checkedAt":"2026-07-20","evidence":"Product and pack-size presence"}]
+      "popularityScore": 70,
+      "popularityEvidence": ["Listed on Shoprite Nigeria's food catalogue", "Chocolate flavour variation is stocked"],
+      "sources": [
+        {
+          "label": "Shoprite Nigeria food catalogue",
+          "url": "https://shoprite.ng/food/",
+          "checkedAt": "2026-07-21",
+          "evidence": "Food catalogue lists Complan Chocolate 450G Box."
+        }
+      ]
     },
     {
       "id": "complan-vanilla-450g",
@@ -76,9 +111,16 @@
       "subCategory": "Malted & Nutrition Drinks",
       "description": "A 450 g box of vanilla-flavoured Complan powdered nutrition drink.",
       "productType": "single",
-      "popularityScore": 66,
-      "popularityEvidence": ["Listed in Shoprite Nigeria's food catalogue", "Recognised nutrition-drink brand and flavour variation"],
-      "sources": [{"label":"Shoprite Nigeria food catalogue","url":"https://shoprite.ng/food/","checkedAt":"2026-07-20","evidence":"Product and pack-size presence"}]
+      "popularityScore": 68,
+      "popularityEvidence": ["Listed on Shoprite Nigeria's food catalogue", "Vanilla flavour variation is stocked"],
+      "sources": [
+        {
+          "label": "Shoprite Nigeria food catalogue",
+          "url": "https://shoprite.ng/food/",
+          "checkedAt": "2026-07-21",
+          "evidence": "Food catalogue lists Complan Vanilla 450G."
+        }
+      ]
     },
     {
       "id": "golden-morn-300g",
@@ -87,11 +129,24 @@
       "unit": "Pack",
       "category": "Breakfast",
       "subCategory": "Breakfast Cereals",
-      "description": "A 300 g pack of Golden Morn grain cereal for breakfast meals.",
+      "description": "A 300 g pack of Golden Morn cereal for breakfast meals and quick family use.",
       "productType": "single",
-      "popularityScore": 84,
-      "popularityEvidence": ["Listed in Shoprite Nigeria's food catalogue", "Multiple pack sizes stocked", "Important breakfast category"],
-      "sources": [{"label":"Shoprite Nigeria food catalogue","url":"https://shoprite.ng/food/","checkedAt":"2026-07-20","evidence":"Product and pack-size presence"}]
+      "popularityScore": 86,
+      "popularityEvidence": ["Listed on Shoprite Nigeria's food catalogue", "Also stocked on Addide's Nestle range"],
+      "sources": [
+        {
+          "label": "Shoprite Nigeria food catalogue",
+          "url": "https://shoprite.ng/food/",
+          "checkedAt": "2026-07-21",
+          "evidence": "Food catalogue lists Grainsmart Golden Morn 300G."
+        },
+        {
+          "label": "Addide Nestle vendor page",
+          "url": "https://addide.com/collections/vendors?q=NESTLE",
+          "checkedAt": "2026-07-21",
+          "evidence": "Vendor page lists Golden Morn 300g."
+        }
+      ]
     },
     {
       "id": "golden-morn-400g",
@@ -100,11 +155,18 @@
       "unit": "Pack",
       "category": "Breakfast",
       "subCategory": "Breakfast Cereals",
-      "description": "A 400 g pack of Golden Morn grain cereal for breakfast meals.",
+      "description": "A 400 g pack of Golden Morn cereal for breakfast meals.",
       "productType": "single",
-      "popularityScore": 86,
-      "popularityEvidence": ["Listed in Shoprite Nigeria's food catalogue", "Multiple pack sizes stocked", "Important breakfast category"],
-      "sources": [{"label":"Shoprite Nigeria food catalogue","url":"https://shoprite.ng/food/","checkedAt":"2026-07-20","evidence":"Product and pack-size presence"}]
+      "popularityScore": 87,
+      "popularityEvidence": ["Listed on Shoprite Nigeria's food catalogue", "Important breakfast category staple"],
+      "sources": [
+        {
+          "label": "Shoprite Nigeria food catalogue",
+          "url": "https://shoprite.ng/food/",
+          "checkedAt": "2026-07-21",
+          "evidence": "Food catalogue lists Golden Morn 400G."
+        }
+      ]
     },
     {
       "id": "golden-morn-600g",
@@ -113,11 +175,24 @@
       "unit": "Pack",
       "category": "Breakfast",
       "subCategory": "Breakfast Cereals",
-      "description": "A 600 g pack of Golden Morn grain cereal for breakfast meals.",
+      "description": "A 600 g pack of Golden Morn cereal for routine household breakfast use.",
       "productType": "single",
-      "popularityScore": 83,
-      "popularityEvidence": ["Listed in Shoprite Nigeria's food catalogue", "Multiple pack sizes stocked", "Important breakfast category"],
-      "sources": [{"label":"Shoprite Nigeria food catalogue","url":"https://shoprite.ng/food/","checkedAt":"2026-07-20","evidence":"Product and pack-size presence"}]
+      "popularityScore": 84,
+      "popularityEvidence": ["Listed on Shoprite Nigeria's food catalogue", "Also stocked on Addide's Nestle range"],
+      "sources": [
+        {
+          "label": "Shoprite Nigeria food catalogue",
+          "url": "https://shoprite.ng/food/",
+          "checkedAt": "2026-07-21",
+          "evidence": "Food catalogue lists Grainsmart Golden Morn 600G."
+        },
+        {
+          "label": "Addide Nestle vendor page",
+          "url": "https://addide.com/collections/vendors?q=NESTLE",
+          "checkedAt": "2026-07-21",
+          "evidence": "Vendor page lists Golden Morn 600g."
+        }
+      ]
     },
     {
       "id": "golden-morn-900g",
@@ -126,24 +201,44 @@
       "unit": "Pack",
       "category": "Breakfast",
       "subCategory": "Breakfast Cereals",
-      "description": "A 900 g family-size pack of Golden Morn grain cereal.",
+      "description": "A 900 g family-size pack of Golden Morn cereal.",
       "productType": "single",
-      "popularityScore": 82,
-      "popularityEvidence": ["Listed in Shoprite Nigeria's food catalogue", "Multiple pack sizes stocked", "Important breakfast category"],
-      "sources": [{"label":"Shoprite Nigeria food catalogue","url":"https://shoprite.ng/food/","checkedAt":"2026-07-20","evidence":"Product and pack-size presence"}]
+      "popularityScore": 88,
+      "popularityEvidence": ["Listed on Shoprite Nigeria's food catalogue", "Addide carries the same 900 g family pack"],
+      "sources": [
+        {
+          "label": "Shoprite Nigeria food catalogue",
+          "url": "https://shoprite.ng/food/",
+          "checkedAt": "2026-07-21",
+          "evidence": "Food catalogue lists Grain Smart Golden Morn 900G Pack."
+        },
+        {
+          "label": "Addide Golden Morn product page",
+          "url": "https://addide.com/collections/all/products/golden-morn-1kg-1",
+          "checkedAt": "2026-07-21",
+          "evidence": "Product page lists Golden Morn 900g."
+        }
+      ]
     },
     {
-      "id": "nestle-activ-go-400g",
-      "name": "Nestle Activ-Go Sachet 400 g",
-      "brand": "Nestle",
-      "unit": "Sachet",
+      "id": "milo-refill-400g",
+      "name": "Milo Refill 400 g",
+      "brand": "Milo",
+      "unit": "Refill",
       "category": "Beverages",
       "subCategory": "Malted & Nutrition Drinks",
-      "description": "A 400 g sachet of Nestle Activ-Go powdered beverage.",
+      "description": "A 400 g refill pack of Milo chocolate malt beverage for hot or cold drinks.",
       "productType": "single",
-      "popularityScore": 90,
-      "popularityEvidence": ["Prominent Jumia Nigeria grocery listing", "Hundreds of published customer ratings", "Major manufacturer presence"],
-      "sources": [{"label":"Jumia Nigeria groceries","url":"https://www.jumia.com.ng/groceries/","checkedAt":"2026-07-20","evidence":"Product, pack-size, prominence, and review-volume presence"}]
+      "popularityScore": 92,
+      "popularityEvidence": ["Addide product page lists the 400 g refill", "Milo is a mainstream malt beverage in Nigeria"],
+      "sources": [
+        {
+          "label": "Addide Milo product page",
+          "url": "https://addide.com/products/milo-refill-500g",
+          "checkedAt": "2026-07-21",
+          "evidence": "Product page title and size selector show Milo Refill 400g."
+        }
+      ]
     },
     {
       "id": "indomie-crayfish-70g",
@@ -154,9 +249,16 @@
       "subCategory": "Noodles",
       "description": "A 70 g pack of instant noodles with crayfish flavouring.",
       "productType": "single",
-      "popularityScore": 89,
-      "popularityEvidence": ["Listed in Shoprite Nigeria's food catalogue", "Multiple flavour variations stocked", "Core Nigerian grocery category"],
-      "sources": [{"label":"Shoprite Nigeria food catalogue","url":"https://shoprite.ng/food/","checkedAt":"2026-07-20","evidence":"Product, flavour, and pack-size presence"}]
+      "popularityScore": 90,
+      "popularityEvidence": ["Listed on Shoprite Nigeria's food catalogue", "Core Nigerian grocery category"],
+      "sources": [
+        {
+          "label": "Shoprite Nigeria food catalogue",
+          "url": "https://shoprite.ng/food/",
+          "checkedAt": "2026-07-21",
+          "evidence": "Food catalogue lists Noodle Crayfish Indomie 70G."
+        }
+      ]
     },
     {
       "id": "indomie-beef-70g",
@@ -168,8 +270,15 @@
       "description": "A 70 g pack of beef-flavoured instant noodles.",
       "productType": "single",
       "popularityScore": 91,
-      "popularityEvidence": ["Listed in Shoprite Nigeria's food catalogue", "Multiple flavour variations stocked", "Core Nigerian grocery category"],
-      "sources": [{"label":"Shoprite Nigeria food catalogue","url":"https://shoprite.ng/food/","checkedAt":"2026-07-20","evidence":"Product, flavour, and pack-size presence"}]
+      "popularityEvidence": ["Listed on Shoprite Nigeria's food catalogue", "Everyday low-ticket grocery item"],
+      "sources": [
+        {
+          "label": "Shoprite Nigeria food catalogue",
+          "url": "https://shoprite.ng/food/",
+          "checkedAt": "2026-07-21",
+          "evidence": "Food catalogue lists Noodles Beef Indomie 70G."
+        }
+      ]
     },
     {
       "id": "indomie-chicken-pepper-70g",
@@ -180,9 +289,16 @@
       "subCategory": "Noodles",
       "description": "A 70 g pack of chicken-and-pepper-flavoured instant noodles.",
       "productType": "single",
-      "popularityScore": 88,
-      "popularityEvidence": ["Listed in Shoprite Nigeria's food catalogue", "Multiple flavour variations stocked", "Core Nigerian grocery category"],
-      "sources": [{"label":"Shoprite Nigeria food catalogue","url":"https://shoprite.ng/food/","checkedAt":"2026-07-20","evidence":"Product, flavour, and pack-size presence"}]
+      "popularityScore": 89,
+      "popularityEvidence": ["Listed on Shoprite Nigeria's food catalogue", "Popular flavour extension within Indomie range"],
+      "sources": [
+        {
+          "label": "Shoprite Nigeria food catalogue",
+          "url": "https://shoprite.ng/food/",
+          "checkedAt": "2026-07-21",
+          "evidence": "Food catalogue lists Noodles Inst Indomie 70G, Chic Pepper."
+        }
+      ]
     },
     {
       "id": "indomie-chicken-stir-fry-70g",
@@ -193,9 +309,16 @@
       "subCategory": "Noodles",
       "description": "A 70 g pack of chicken stir-fry-flavoured instant noodles.",
       "productType": "single",
-      "popularityScore": 86,
-      "popularityEvidence": ["Listed in Shoprite Nigeria's food catalogue", "Multiple flavour variations stocked", "Core Nigerian grocery category"],
-      "sources": [{"label":"Shoprite Nigeria food catalogue","url":"https://shoprite.ng/food/","checkedAt":"2026-07-20","evidence":"Product, flavour, and pack-size presence"}]
+      "popularityScore": 87,
+      "popularityEvidence": ["Listed on Shoprite Nigeria's food catalogue", "Complements core chicken flavour range"],
+      "sources": [
+        {
+          "label": "Shoprite Nigeria food catalogue",
+          "url": "https://shoprite.ng/food/",
+          "checkedAt": "2026-07-21",
+          "evidence": "Food catalogue lists Noodles Inst Indomie 70G, Chic Sfried."
+        }
+      ]
     },
     {
       "id": "quaker-oats-500g",
@@ -206,9 +329,16 @@
       "subCategory": "Oats",
       "description": "A 500 g tin of Quaker oats for porridge and other breakfast recipes.",
       "productType": "single",
-      "popularityScore": 80,
-      "popularityEvidence": ["Listed in Shoprite Nigeria's food catalogue", "Established breakfast brand", "Important breakfast category"],
-      "sources": [{"label":"Shoprite Nigeria food catalogue","url":"https://shoprite.ng/food/","checkedAt":"2026-07-20","evidence":"Product and pack-size presence"}]
+      "popularityScore": 82,
+      "popularityEvidence": ["Listed on Shoprite Nigeria's food catalogue", "Quaker is an established breakfast brand"],
+      "sources": [
+        {
+          "label": "Shoprite Nigeria food catalogue",
+          "url": "https://shoprite.ng/food/",
+          "checkedAt": "2026-07-21",
+          "evidence": "Food catalogue lists Tin Oats Quaker 500G Pack."
+        }
+      ]
     },
     {
       "id": "power-vegetable-oil-750ml",
@@ -219,9 +349,16 @@
       "subCategory": "Cooking Oil",
       "description": "A 750 ml bottle of vegetable cooking oil for everyday meal preparation.",
       "productType": "single",
-      "popularityScore": 85,
-      "popularityEvidence": ["Listed in Shoprite Nigeria's food catalogue", "Multiple pack sizes stocked", "Core cooking staple"],
-      "sources": [{"label":"Shoprite Nigeria food catalogue","url":"https://shoprite.ng/food/","checkedAt":"2026-07-20","evidence":"Product and pack-size presence"}]
+      "popularityScore": 86,
+      "popularityEvidence": ["Listed on Shoprite Nigeria's food catalogue", "Small household cooking-oil size"],
+      "sources": [
+        {
+          "label": "Shoprite Nigeria food catalogue",
+          "url": "https://shoprite.ng/food/",
+          "checkedAt": "2026-07-21",
+          "evidence": "Food catalogue lists Vegetable Oil Power 750Ml."
+        }
+      ]
     },
     {
       "id": "power-vegetable-oil-3l",
@@ -232,9 +369,16 @@
       "subCategory": "Cooking Oil",
       "description": "A 3 L bottle of vegetable cooking oil for household meal preparation.",
       "productType": "single",
-      "popularityScore": 84,
-      "popularityEvidence": ["Listed in Shoprite Nigeria's food catalogue", "Multiple pack sizes stocked", "Core cooking staple"],
-      "sources": [{"label":"Shoprite Nigeria food catalogue","url":"https://shoprite.ng/food/","checkedAt":"2026-07-20","evidence":"Product and pack-size presence"}]
+      "popularityScore": 85,
+      "popularityEvidence": ["Listed on Shoprite Nigeria's food catalogue", "Large-format staple for family kitchens"],
+      "sources": [
+        {
+          "label": "Shoprite Nigeria food catalogue",
+          "url": "https://shoprite.ng/food/",
+          "checkedAt": "2026-07-21",
+          "evidence": "Food catalogue lists Cooking Oil Vegtable Power 3L."
+        }
+      ]
     },
     {
       "id": "bonduelle-vegetables-400g",
@@ -243,76 +387,18 @@
       "unit": "Tin",
       "category": "Food Cupboard",
       "subCategory": "Canned Vegetables",
-      "description": "A 400 g tin of mixed vegetables for convenient meal preparation.",
+      "description": "A 400 g tin of Bonduelle mixed vegetables for quick meal preparation.",
       "productType": "single",
-      "popularityScore": 63,
-      "popularityEvidence": ["Listed in Shoprite Nigeria's food catalogue", "Useful canned-food category coverage"],
-      "sources": [{"label":"Shoprite Nigeria food catalogue","url":"https://shoprite.ng/food/","checkedAt":"2026-07-20","evidence":"Product and pack-size presence; exact variety should be checked on pack"}]
-    },
-    {
-      "id": "malta-guinness-can-330ml-24",
-      "name": "Malta Guinness Can 330 ml × 24",
-      "brand": "Malta Guinness",
-      "unit": "Carton",
-      "category": "Beverages",
-      "subCategory": "Malt Drinks",
-      "description": "A carton containing 24 cans of Malta Guinness malt drink, 330 ml each.",
-      "productType": "single",
-      "popularityScore": 95,
-      "popularityEvidence": ["Prominent Jumia Nigeria grocery listing", "Hundreds of published customer ratings", "Major beverage brand presence"],
-      "sources": [{"label":"Jumia Nigeria groceries","url":"https://www.jumia.com.ng/groceries/","checkedAt":"2026-07-20","evidence":"Product, case size, prominence, and review-volume presence"}]
-    },
-    {
-      "id": "jameson-irish-whiskey-70cl",
-      "name": "Jameson Irish Whiskey 70 cl",
-      "brand": "Jameson",
-      "unit": "Bottle",
-      "category": "Beverages",
-      "subCategory": "Whisky",
-      "description": "A 70 cl bottle of Jameson blended Irish whiskey for adult consumers.",
-      "productType": "single",
-      "popularityScore": 87,
-      "popularityEvidence": ["Prominent Jumia Nigeria grocery listing", "Hundreds of published customer ratings", "Major international brand presence"],
-      "sources": [{"label":"Jumia Nigeria groceries","url":"https://www.jumia.com.ng/groceries/","checkedAt":"2026-07-20","evidence":"Product, pack-size, prominence, and review-volume presence"}]
-    },
-    {
-      "id": "jameson-black-barrel-70cl",
-      "name": "Jameson Black Barrel Irish Whiskey 70 cl",
-      "brand": "Jameson",
-      "unit": "Bottle",
-      "category": "Beverages",
-      "subCategory": "Whisky",
-      "description": "A 70 cl bottle of Jameson Black Barrel Irish whiskey for adult consumers.",
-      "productType": "single",
-      "popularityScore": 82,
-      "popularityEvidence": ["Prominent Jumia Nigeria grocery listing", "Hundreds of published customer ratings", "Brand variation coverage"],
-      "sources": [{"label":"Jumia Nigeria groceries","url":"https://www.jumia.com.ng/groceries/","checkedAt":"2026-07-20","evidence":"Product, pack-size, prominence, and review-volume presence"}]
-    },
-    {
-      "id": "baileys-original-700ml",
-      "name": "Baileys Original Irish Cream 700 ml",
-      "brand": "Baileys",
-      "unit": "Bottle",
-      "category": "Beverages",
-      "subCategory": "Liqueurs",
-      "description": "A 700 ml bottle of Baileys Original Irish Cream liqueur for adult consumers.",
-      "productType": "single",
-      "popularityScore": 81,
-      "popularityEvidence": ["Prominent Jumia Nigeria grocery listing", "Published customer ratings", "Major international brand presence"],
-      "sources": [{"label":"Jumia Nigeria groceries","url":"https://www.jumia.com.ng/groceries/","checkedAt":"2026-07-20","evidence":"Product, pack-size, prominence, and review-volume presence"}]
-    },
-    {
-      "id": "viva-dishwashing-liquid-green-300ml",
-      "name": "Viva Plus Dishwashing Liquid Green 300 ml",
-      "brand": "Viva Plus",
-      "unit": "Bottle",
-      "category": "Household",
-      "subCategory": "Dishwashing",
-      "description": "A 300 ml bottle of green Viva Plus liquid for hand-washing dishes.",
-      "productType": "single",
-      "popularityScore": 65,
-      "popularityEvidence": ["Listed prominently in Jumia Nigeria groceries", "Household cleaning category importance"],
-      "sources": [{"label":"Jumia Nigeria groceries","url":"https://www.jumia.com.ng/groceries/","checkedAt":"2026-07-20","evidence":"Product and pack-size presence"}]
+      "popularityScore": 66,
+      "popularityEvidence": ["Listed on Shoprite Nigeria's food catalogue", "Useful canned-food coverage for small stores"],
+      "sources": [
+        {
+          "label": "Shoprite Nigeria food catalogue",
+          "url": "https://shoprite.ng/food/",
+          "checkedAt": "2026-07-21",
+          "evidence": "Food catalogue lists Vegetables Bonduelle 400G."
+        }
+      ]
     },
     {
       "id": "nestle-chocolate-ice-cream-1-3l",
@@ -323,9 +409,16 @@
       "subCategory": "Ice Cream",
       "description": "A 1.3 L tub of chocolate-flavoured Nestle ice cream.",
       "productType": "single",
-      "popularityScore": 68,
-      "popularityEvidence": ["Listed in Shoprite Nigeria's food catalogue", "Major manufacturer presence", "Flavour variation coverage"],
-      "sources": [{"label":"Shoprite Nigeria food catalogue","url":"https://shoprite.ng/food/","checkedAt":"2026-07-20","evidence":"Product, flavour, and pack-size presence"}]
+      "popularityScore": 71,
+      "popularityEvidence": ["Listed on Shoprite Nigeria's food catalogue", "Mainstream frozen-dessert brand"],
+      "sources": [
+        {
+          "label": "Shoprite Nigeria food catalogue",
+          "url": "https://shoprite.ng/food/",
+          "checkedAt": "2026-07-21",
+          "evidence": "Food catalogue lists Ice Cream chocolate Nestle 1.3L."
+        }
+      ]
     },
     {
       "id": "nestle-vanilla-ice-cream-1-3l",
@@ -336,9 +429,596 @@
       "subCategory": "Ice Cream",
       "description": "A 1.3 L tub of vanilla-flavoured Nestle ice cream.",
       "productType": "single",
-      "popularityScore": 69,
-      "popularityEvidence": ["Listed in Shoprite Nigeria's food catalogue", "Major manufacturer presence", "Flavour variation coverage"],
-      "sources": [{"label":"Shoprite Nigeria food catalogue","url":"https://shoprite.ng/food/","checkedAt":"2026-07-20","evidence":"Product, flavour, and pack-size presence"}]
+      "popularityScore": 72,
+      "popularityEvidence": ["Listed on Shoprite Nigeria's food catalogue", "Core vanilla flavour in frozen-dessert category"],
+      "sources": [
+        {
+          "label": "Shoprite Nigeria food catalogue",
+          "url": "https://shoprite.ng/food/",
+          "checkedAt": "2026-07-21",
+          "evidence": "Food catalogue lists Ice Cream Vanilla Nestle1.3L."
+        }
+      ]
+    },
+    {
+      "id": "indomie-chicken-120g",
+      "name": "Indomie Chicken Flavour 120 g",
+      "brand": "Indomie",
+      "unit": "Pack",
+      "category": "Food Cupboard",
+      "subCategory": "Noodles",
+      "description": "A 120 g pack of Indomie chicken flavour instant noodles.",
+      "productType": "single",
+      "popularityScore": 90,
+      "popularityEvidence": ["Addide's Indomie listing includes the 120 g chicken pack", "Core convenience-meal category"],
+      "sources": [
+        {
+          "label": "Addide Indomie vendor page",
+          "url": "https://addide.com/collections/vendors?q=INDOMIE",
+          "checkedAt": "2026-07-21",
+          "evidence": "Vendor page lists Indomie Chicken Flavour 120g."
+        }
+      ]
+    },
+    {
+      "id": "indomie-chicken-180g",
+      "name": "Indomie Chicken Flavour 180 g",
+      "brand": "Indomie",
+      "unit": "Pack",
+      "category": "Food Cupboard",
+      "subCategory": "Noodles",
+      "description": "A 180 g pack of Indomie chicken flavour instant noodles.",
+      "productType": "single",
+      "popularityScore": 88,
+      "popularityEvidence": ["Addide's Indomie listing includes the 180 g chicken pack", "Larger pack-size variation is stocked"],
+      "sources": [
+        {
+          "label": "Addide Indomie vendor page",
+          "url": "https://addide.com/collections/vendors?q=INDOMIE",
+          "checkedAt": "2026-07-21",
+          "evidence": "Vendor page lists Indomie Chicken Flavour 180g."
+        }
+      ]
+    },
+    {
+      "id": "indomie-onion-chicken-70g",
+      "name": "Indomie Onion Chicken 70 g",
+      "brand": "Indomie",
+      "unit": "Pack",
+      "category": "Food Cupboard",
+      "subCategory": "Noodles",
+      "description": "A 70 g pack of Indomie onion chicken instant noodles.",
+      "productType": "single",
+      "popularityScore": 87,
+      "popularityEvidence": ["Addide product page lists the 70 g pack", "Alternative flavour within a top-selling noodle brand"],
+      "sources": [
+        {
+          "label": "Addide Onion Chicken product page",
+          "url": "https://addide.com/products/indomie-onion-chicken-70g",
+          "checkedAt": "2026-07-21",
+          "evidence": "Product page title and size selector show Indomie Onion Chicken 70g."
+        }
+      ]
+    },
+    {
+      "id": "indomie-onion-chicken-120g",
+      "name": "Indomie Onion Chicken 120 g",
+      "brand": "Indomie",
+      "unit": "Pack",
+      "category": "Food Cupboard",
+      "subCategory": "Noodles",
+      "description": "A 120 g pack of Indomie onion chicken instant noodles.",
+      "productType": "single",
+      "popularityScore": 85,
+      "popularityEvidence": ["Addide's Indomie listing includes the 120 g onion chicken pack", "Mid-size flavour variation is stocked"],
+      "sources": [
+        {
+          "label": "Addide Indomie vendor page",
+          "url": "https://addide.com/collections/vendors?q=INDOMIE",
+          "checkedAt": "2026-07-21",
+          "evidence": "Vendor page lists Indomie Onion Chicken 120g."
+        }
+      ]
+    },
+    {
+      "id": "indomie-onion-chicken-180g",
+      "name": "Indomie Onion Chicken 180 g",
+      "brand": "Indomie",
+      "unit": "Pack",
+      "category": "Food Cupboard",
+      "subCategory": "Noodles",
+      "description": "A 180 g pack of Indomie onion chicken instant noodles.",
+      "productType": "single",
+      "popularityScore": 83,
+      "popularityEvidence": ["Addide's Indomie listing includes the 180 g onion chicken pack", "Large pack-size variation is stocked"],
+      "sources": [
+        {
+          "label": "Addide Indomie vendor page",
+          "url": "https://addide.com/collections/vendors?q=INDOMIE",
+          "checkedAt": "2026-07-21",
+          "evidence": "Vendor page lists Indomie Onion Chicken 180g."
+        }
+      ]
+    },
+    {
+      "id": "mamador-vegetable-oil-1-5l",
+      "name": "Mamador Vegetable Oil 1.5 L",
+      "brand": "Mamador",
+      "unit": "Bottle",
+      "category": "Food Cupboard",
+      "subCategory": "Cooking Oil",
+      "description": "A 1.5 L bottle of Mamador vegetable oil for everyday cooking.",
+      "productType": "single",
+      "popularityScore": 89,
+      "popularityEvidence": ["Addide product page lists the 1.5 litre pack", "Major Nigerian cooking-oil brand"],
+      "sources": [
+        {
+          "label": "Addide Mamador product page",
+          "url": "https://addide.com/products/mamador-vegetable-oil",
+          "checkedAt": "2026-07-21",
+          "evidence": "Product page title and size selector show Mamador Vegetable Oil 1.5Ltr."
+        }
+      ]
+    },
+    {
+      "id": "peak-full-cream-milk-tin-400g",
+      "name": "Peak Powdered Full Cream Milk Tin 400 g",
+      "brand": "Peak",
+      "unit": "Tin",
+      "category": "Dairy",
+      "subCategory": "Milk Powder",
+      "description": "A 400 g tin of Peak powdered full cream milk for tea, cereals, and family use.",
+      "productType": "single",
+      "popularityScore": 91,
+      "popularityEvidence": ["Addide product page lists the 400 g tin", "Peak is a mainstream Nigerian milk brand"],
+      "sources": [
+        {
+          "label": "Addide Peak milk product page",
+          "url": "https://addide.com/products/peak-powdered-milk-tin-400g",
+          "checkedAt": "2026-07-21",
+          "evidence": "Product page title shows Peak Powdered Full Cream Milk Tin 400g."
+        }
+      ]
+    },
+    {
+      "id": "peak-full-cream-milk-tin-900g",
+      "name": "Peak Powdered Full Cream Milk Tin 900 g",
+      "brand": "Peak",
+      "unit": "Tin",
+      "category": "Dairy",
+      "subCategory": "Milk Powder",
+      "description": "A 900 g tin of Peak powdered full cream milk for larger family households.",
+      "productType": "single",
+      "popularityScore": 88,
+      "popularityEvidence": ["Addide product page lists the 900 g tin", "Large-format family milk SKU"],
+      "sources": [
+        {
+          "label": "Addide Peak milk product page",
+          "url": "https://addide.com/products/peak-powdered-full-cream-milk-tin-900g",
+          "checkedAt": "2026-07-21",
+          "evidence": "Product page title shows Peak Powdered Full Cream Milk Tin 900g."
+        }
+      ]
+    },
+    {
+      "id": "peak-123-refill-380g",
+      "name": "Peak 123 Refill 380 g",
+      "brand": "Peak",
+      "unit": "Refill",
+      "category": "Baby & Toddler",
+      "subCategory": "Growing-Up Milk",
+      "description": "A 380 g refill pack of Peak 123 growing-up milk powder for toddlers.",
+      "productType": "single",
+      "popularityScore": 76,
+      "popularityEvidence": ["Addide product page lists the 380 g refill", "Common follow-on milk segment"],
+      "sources": [
+        {
+          "label": "Addide Peak 123 product page",
+          "url": "https://addide.com/products/peak-123-refill-380g",
+          "checkedAt": "2026-07-21",
+          "evidence": "Product page title shows Peak 123 Refill 380g."
+        }
+      ]
+    },
+    {
+      "id": "peak-evaporated-regular-160ml",
+      "name": "Peak Evaporated Regular 160 ml",
+      "brand": "Peak",
+      "unit": "Tin",
+      "category": "Dairy",
+      "subCategory": "Evaporated Milk",
+      "description": "A 160 ml tin of Peak regular evaporated milk for tea, coffee, and cooking.",
+      "productType": "single",
+      "popularityScore": 80,
+      "popularityEvidence": ["Addide product page lists the 160 ml tin", "Common pantry milk format"],
+      "sources": [
+        {
+          "label": "Addide Peak evaporated milk page",
+          "url": "https://addide.com/products/peak-evaporated-regular-160ml",
+          "checkedAt": "2026-07-21",
+          "evidence": "Product page title shows Peak Evaporated Regular 160ml."
+        }
+      ]
+    },
+    {
+      "id": "peak-filled-evaporated-160ml",
+      "name": "Peak Filled Evaporated Milk 160 ml",
+      "brand": "Peak",
+      "unit": "Tin",
+      "category": "Dairy",
+      "subCategory": "Evaporated Milk",
+      "description": "A 160 ml tin of Peak filled evaporated milk for beverages and cooking.",
+      "productType": "single",
+      "popularityScore": 79,
+      "popularityEvidence": ["Addide product page lists the 160 ml pack", "Entry-level evaporated milk option"],
+      "sources": [
+        {
+          "label": "Addide Peak filled milk page",
+          "url": "https://addide.com/products/peak-filled-swtnd-cond-milk78g",
+          "checkedAt": "2026-07-21",
+          "evidence": "Product page title and size selector show Peak Filled Evaporated Milk 160ml."
+        }
+      ]
+    },
+    {
+      "id": "quaker-oats-refill-385g",
+      "name": "Quaker Oats Refill 385 g",
+      "brand": "Quaker",
+      "unit": "Refill",
+      "category": "Breakfast",
+      "subCategory": "Oats",
+      "description": "A 385 g refill pack of Quaker oats for porridge and breakfast recipes.",
+      "productType": "single",
+      "popularityScore": 78,
+      "popularityEvidence": ["Addide product page lists the 385 g refill", "Popular oats brand in Nigerian retail"],
+      "sources": [
+        {
+          "label": "Addide Quaker product page",
+          "url": "https://addide.com/products/quaker-oats-refill-500g",
+          "checkedAt": "2026-07-21",
+          "evidence": "Product page title and size selector show Quaker Oats Refill 385g."
+        }
+      ]
+    },
+    {
+      "id": "ovaltine-refill-400g",
+      "name": "Ovaltine Refill 400 g",
+      "brand": "Ovaltine",
+      "unit": "Refill",
+      "category": "Beverages",
+      "subCategory": "Malted & Nutrition Drinks",
+      "description": "A 400 g refill pack of Ovaltine malt beverage powder.",
+      "productType": "single",
+      "popularityScore": 74,
+      "popularityEvidence": ["Addide product page lists the 400 g refill", "Established malt drink alternative"],
+      "sources": [
+        {
+          "label": "Addide Ovaltine product page",
+          "url": "https://addide.com/products/ovaltine",
+          "checkedAt": "2026-07-21",
+          "evidence": "Product page title and size selector show Ovaltine Refill 400g."
+        }
+      ]
+    },
+    {
+      "id": "checkers-custard-vanilla-refill-1kg",
+      "name": "Checkers Custard Vanilla Refill 1 kg",
+      "brand": "Checkers",
+      "unit": "Refill",
+      "category": "Breakfast",
+      "subCategory": "Custard",
+      "description": "A 1 kg refill pack of vanilla Checkers custard for breakfast and dessert use.",
+      "productType": "single",
+      "popularityScore": 77,
+      "popularityEvidence": ["Addide product page lists the 1 kg refill", "Custard is a common Nigerian breakfast line"],
+      "sources": [
+        {
+          "label": "Addide Checkers custard page",
+          "url": "https://addide.com/products/checkers-custard-vanilla-refill-1kg",
+          "checkedAt": "2026-07-21",
+          "evidence": "Product page title shows Checkers Custard Vanilla Refill 1kg."
+        }
+      ]
+    },
+    {
+      "id": "devon-kings-vegetable-cooking-oil-5l",
+      "name": "Devon Kings Vegetable Cooking Oil 5 L",
+      "brand": "Devon Kings",
+      "unit": "Bottle",
+      "category": "Food Cupboard",
+      "subCategory": "Cooking Oil",
+      "description": "A 5 L bottle of Devon Kings vegetable cooking oil for family-scale cooking.",
+      "productType": "single",
+      "popularityScore": 86,
+      "popularityEvidence": ["Prince Ebeano online category lists the 5 L SKU", "Major packaged-oil line in Nigerian supermarkets"],
+      "sources": [
+        {
+          "label": "Prince Ebeano food and condiments category",
+          "url": "https://ebeano.rytchmogroup.com/category/food-condiments",
+          "checkedAt": "2026-07-21",
+          "evidence": "Category page lists Devon Kings Vegetable Cooking Oil 5L."
+        }
+      ]
+    },
+    {
+      "id": "mamdor-vegetable-cooking-oil-5l",
+      "name": "Mamdor Vegetable Cooking Oil 5 L",
+      "brand": "Mamdor",
+      "unit": "Bottle",
+      "category": "Food Cupboard",
+      "subCategory": "Cooking Oil",
+      "description": "A 5 L bottle of Mamdor vegetable cooking oil for larger household use.",
+      "productType": "single",
+      "popularityScore": 84,
+      "popularityEvidence": ["Prince Ebeano online category lists the 5 L SKU", "Large-format cooking oil for supermarket imports"],
+      "sources": [
+        {
+          "label": "Prince Ebeano food and condiments category",
+          "url": "https://ebeano.rytchmogroup.com/category/food-condiments",
+          "checkedAt": "2026-07-21",
+          "evidence": "Category page lists Mamdor Vegetable Cooking Oil 5L."
+        }
+      ]
+    },
+    {
+      "id": "golden-penny-macaroni-500g",
+      "name": "Golden Penny Macaroni 500 g",
+      "brand": "Golden Penny",
+      "unit": "Pack",
+      "category": "Food Cupboard",
+      "subCategory": "Pasta",
+      "description": "A 500 g pack of Golden Penny macaroni for family meals and everyday pantry use.",
+      "productType": "single",
+      "popularityScore": 88,
+      "popularityEvidence": ["Prince Ebeano site lists the 500 g SKU", "Golden Penny is a mainstream staple-food brand"],
+      "sources": [
+        {
+          "label": "Prince Ebeano cereals and grains products",
+          "url": "https://ebeano.rytchmogroup.com/products?category=cereals-grains",
+          "checkedAt": "2026-07-21",
+          "evidence": "Products page lists Golden Penny Macaroni 500g."
+        }
+      ]
+    },
+    {
+      "id": "knorr-beef-cubes-8g-x50",
+      "name": "Knorr Beef Cubes 8 g x 50",
+      "brand": "Knorr",
+      "unit": "Pack",
+      "category": "Food Cupboard",
+      "subCategory": "Seasonings",
+      "description": "A value pack of 50 Knorr beef seasoning cubes at 8 g each.",
+      "productType": "single",
+      "popularityScore": 90,
+      "popularityEvidence": ["Prince Ebeano online category lists the 8 g x 50 pack", "Knorr cubes are a staple seasoning line"],
+      "sources": [
+        {
+          "label": "Prince Ebeano food and condiments category",
+          "url": "https://ebeano.rytchmogroup.com/category/food-condiments",
+          "checkedAt": "2026-07-21",
+          "evidence": "Category page lists Knorr Beef Cubes 8g x50."
+        }
+      ]
+    },
+    {
+      "id": "derica-tomato-paste-400g",
+      "name": "Derica Tomato Paste 400 g",
+      "brand": "Derica",
+      "unit": "Tin",
+      "category": "Food Cupboard",
+      "subCategory": "Tomato Paste",
+      "description": "A 400 g tin of Derica tomato paste for stews, soups, and sauces.",
+      "productType": "single",
+      "popularityScore": 83,
+      "popularityEvidence": ["Prince Ebeano online category lists the 400 g tin", "Tomato paste is a core Nigerian pantry staple"],
+      "sources": [
+        {
+          "label": "Prince Ebeano food and condiments category",
+          "url": "https://ebeano.rytchmogroup.com/category/food-condiments",
+          "checkedAt": "2026-07-21",
+          "evidence": "Category page lists Derica Tomato Paste 400g."
+        }
+      ]
+    },
+    {
+      "id": "pepsi-light-33cl-can",
+      "name": "Pepsi Light 33 cl Can",
+      "brand": "Pepsi",
+      "unit": "Can",
+      "category": "Beverages",
+      "subCategory": "Soft Drinks",
+      "description": "A 33 cl can of Pepsi Light soft drink.",
+      "productType": "single",
+      "popularityScore": 78,
+      "popularityEvidence": ["Prince Ebeano homepage lists the 33 cl can", "Soft-drink singles are common supermarket impulse items"],
+      "sources": [
+        {
+          "label": "Prince Ebeano online home page",
+          "url": "https://ebeano.rytchmogroup.com/home",
+          "checkedAt": "2026-07-21",
+          "evidence": "Trending products section lists Pepsi Light 33cl Can."
+        }
+      ]
+    },
+    {
+      "id": "coca-cola-33cl-can",
+      "name": "Coca-Cola 33 cl Can",
+      "brand": "Coca-Cola",
+      "unit": "Can",
+      "category": "Beverages",
+      "subCategory": "Soft Drinks",
+      "description": "A 33 cl can of Coca-Cola soft drink.",
+      "productType": "single",
+      "popularityScore": 82,
+      "popularityEvidence": ["Prince Ebeano homepage lists the 33 cl can", "Coca-Cola is a high-frequency convenience drink"],
+      "sources": [
+        {
+          "label": "Prince Ebeano online home page",
+          "url": "https://ebeano.rytchmogroup.com/home",
+          "checkedAt": "2026-07-21",
+          "evidence": "Trending products section lists Coca-Cola 33cl Can."
+        }
+      ]
+    },
+    {
+      "id": "baygon-insecticide-aerosol-300ml",
+      "name": "Baygon Insecticide Aerosol 300 ml",
+      "brand": "Baygon",
+      "unit": "Can",
+      "category": "Household",
+      "subCategory": "Insecticides",
+      "description": "A 300 ml aerosol can of Baygon insecticide for indoor pest control.",
+      "productType": "single",
+      "popularityScore": 79,
+      "popularityEvidence": ["SPAR Nigeria non-food catalogue lists the 300 ml can", "Recognised household insecticide brand"],
+      "sources": [
+        {
+          "label": "SPAR Nigeria non-food catalogue",
+          "url": "https://sparnigeria.com/products-catalogue/non-food/",
+          "checkedAt": "2026-07-21",
+          "evidence": "Non-food catalogue lists BAYGON INSECTICIDE AEROSOL 300ML."
+        }
+      ]
+    },
+    {
+      "id": "dettol-antibacterial-original-soap-160g",
+      "name": "Dettol Anti Bacterial Original Soap 160 g",
+      "brand": "Dettol",
+      "unit": "Bar",
+      "category": "Personal Care",
+      "subCategory": "Bath Soap",
+      "description": "A 160 g bar of Dettol original antibacterial soap.",
+      "productType": "single",
+      "popularityScore": 84,
+      "popularityEvidence": ["SPAR Nigeria non-food catalogue lists the 160 g bar", "Trusted hygiene brand in Nigerian retail"],
+      "sources": [
+        {
+          "label": "SPAR Nigeria non-food catalogue",
+          "url": "https://sparnigeria.com/products-catalogue/non-food/",
+          "checkedAt": "2026-07-21",
+          "evidence": "Non-food catalogue lists DETTOL ANTI BACTERIAL ORIGINAL SOAP 160G."
+        }
+      ]
+    },
+    {
+      "id": "dettol-antiseptic-disinfectant-250ml",
+      "name": "Dettol Antiseptic Disinfectant 250 ml",
+      "brand": "Dettol",
+      "unit": "Bottle",
+      "category": "Household",
+      "subCategory": "Disinfectants",
+      "description": "A 250 ml bottle of Dettol antiseptic disinfectant for home hygiene use.",
+      "productType": "single",
+      "popularityScore": 82,
+      "popularityEvidence": ["SPAR Nigeria non-food catalogue lists the 250 ml bottle", "Widely used disinfectant format"],
+      "sources": [
+        {
+          "label": "SPAR Nigeria non-food catalogue",
+          "url": "https://sparnigeria.com/products-catalogue/non-food/",
+          "checkedAt": "2026-07-21",
+          "evidence": "Non-food catalogue lists DETTOL ANTISEPTIC DISINFECTANT 250ML."
+        }
+      ]
+    },
+    {
+      "id": "dettol-antiseptic-disinfectant-500ml",
+      "name": "Dettol Antiseptic Disinfectant 500 ml",
+      "brand": "Dettol",
+      "unit": "Bottle",
+      "category": "Household",
+      "subCategory": "Disinfectants",
+      "description": "A 500 ml bottle of Dettol antiseptic disinfectant for routine cleaning and first-aid use.",
+      "productType": "single",
+      "popularityScore": 84,
+      "popularityEvidence": ["SPAR Nigeria non-food catalogue lists the 500 ml bottle", "Mid-size disinfectant pack is commonly stocked"],
+      "sources": [
+        {
+          "label": "SPAR Nigeria non-food catalogue",
+          "url": "https://sparnigeria.com/products-catalogue/non-food/",
+          "checkedAt": "2026-07-21",
+          "evidence": "Non-food catalogue lists DETTOL ANTISEPTIC DISINFECTANT 500ML."
+        }
+      ]
+    },
+    {
+      "id": "dettol-antiseptic-disinfectant-1l",
+      "name": "Dettol Antiseptic Disinfectant 1 L",
+      "brand": "Dettol",
+      "unit": "Bottle",
+      "category": "Household",
+      "subCategory": "Disinfectants",
+      "description": "A 1 L bottle of Dettol antiseptic disinfectant for larger household cleaning routines.",
+      "productType": "single",
+      "popularityScore": 85,
+      "popularityEvidence": ["SPAR Nigeria non-food catalogue lists the 1 litre bottle", "Large household hygiene size"],
+      "sources": [
+        {
+          "label": "SPAR Nigeria non-food catalogue",
+          "url": "https://sparnigeria.com/products-catalogue/non-food/",
+          "checkedAt": "2026-07-21",
+          "evidence": "Non-food catalogue lists DETTOL ANTISEPTIC DISINFECTANT 1LTR."
+        }
+      ]
+    },
+    {
+      "id": "harpic-power-plus-original-1l",
+      "name": "Harpic Power Plus Toilet Cleaner Original 1 L",
+      "brand": "Harpic",
+      "unit": "Bottle",
+      "category": "Household",
+      "subCategory": "Toilet Cleaners",
+      "description": "A 1 L bottle of Harpic Power Plus original toilet cleaner.",
+      "productType": "single",
+      "popularityScore": 80,
+      "popularityEvidence": ["SPAR Nigeria non-food catalogue lists the 1 litre bottle", "Core toilet-cleaning SKU"],
+      "sources": [
+        {
+          "label": "SPAR Nigeria non-food catalogue",
+          "url": "https://sparnigeria.com/products-catalogue/non-food/",
+          "checkedAt": "2026-07-21",
+          "evidence": "Non-food catalogue lists HARPIC POWER PLUS TOILET CLEANER ORIGINAL 1L."
+        }
+      ]
+    },
+    {
+      "id": "morning-fresh-zesty-lemon-1000ml",
+      "name": "Morning Fresh Zesty Lemon Dish Wash 1000 ml",
+      "brand": "Morning Fresh",
+      "unit": "Bottle",
+      "category": "Household",
+      "subCategory": "Dishwashing",
+      "description": "A 1000 ml bottle of Morning Fresh zesty lemon dishwashing liquid.",
+      "productType": "single",
+      "popularityScore": 81,
+      "popularityEvidence": ["SPAR Nigeria non-food catalogue lists the 1000 ml bottle", "Common dishwashing-liquid brand"],
+      "sources": [
+        {
+          "label": "SPAR Nigeria non-food catalogue",
+          "url": "https://sparnigeria.com/products-catalogue/non-food/",
+          "checkedAt": "2026-07-21",
+          "evidence": "Non-food catalogue lists MORNING FRESH ZESTY LEMON D WASH 1000ML."
+        }
+      ]
+    },
+    {
+      "id": "johnsons-baby-oil-500ml-pink",
+      "name": "Johnson's Baby Oil 500 ml Pink",
+      "brand": "Johnson's",
+      "unit": "Bottle",
+      "category": "Baby & Toddler",
+      "subCategory": "Baby Toiletries",
+      "description": "A 500 ml bottle of Johnson's baby oil in the pink variant.",
+      "productType": "single",
+      "popularityScore": 78,
+      "popularityEvidence": ["SPAR Nigeria baby products catalogue lists the 500 ml bottle", "Trusted baby-care brand in supermarket retail"],
+      "sources": [
+        {
+          "label": "SPAR Nigeria baby products catalogue",
+          "url": "https://sparnigeria.com/products-catalogue/baby-products/",
+          "checkedAt": "2026-07-21",
+          "evidence": "Baby products catalogue lists JOHNSON'S BABY OIL 500ML PINK."
+        }
+      ]
     }
   ]
 }

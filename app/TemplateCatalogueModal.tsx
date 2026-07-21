@@ -126,7 +126,7 @@ export function TemplateCatalogueModal({ onClose, onImport }: {
                 <em className={`pack-status ${pack.status}`}>{pack.status === "preview" ? "Preview" : pack.status === "available" ? "Ready" : "Planned"}</em>
               </button>
             ))}
-            {manifest ? <div className="method-note"><strong>How “top” is determined</strong><p>{manifest.methodology}</p><small>Catalogue version {manifest.version} · reviewed {manifest.updatedAt}</small></div> : null}
+            {manifest ? <div className="method-note"><strong>How "top" is determined</strong><p>{manifest.methodology}</p><small>Catalogue version {manifest.version} · reviewed {manifest.updatedAt}</small></div> : null}
           </aside>
 
           <div className="template-browser">
@@ -173,7 +173,7 @@ export function TemplateCatalogueModal({ onClose, onImport }: {
         </div>
 
         <div className="modal-actions template-actions">
-          <div><strong>{selected.size.toLocaleString()} products selected</strong><span>Missing store-specific fields will be marked “Needs setup”.</span></div>
+          <div><strong>{selected.size.toLocaleString()} products selected</strong><span>Missing store-specific fields will be marked "Needs setup".</span></div>
           <div><button className="secondary-button" onClick={onClose}>Cancel</button><button className="secondary-button" disabled={!selectedItems.length || !packData} onClick={() => packData && onImport(selectedItems, packData.packId, packData.catalogueVersion, "append")}>Add to current</button><button className="primary-button" disabled={!selectedItems.length || !packData} onClick={() => packData && onImport(selectedItems, packData.packId, packData.catalogueVersion, "replace")}>Replace and use template</button></div>
         </div>
       </section>

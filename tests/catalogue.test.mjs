@@ -5,7 +5,7 @@ import { validateBarcode, validateCatalogue } from "../scripts/validate-catalogu
 test("validates the versioned staged catalogue", async () => {
   const result = await validateCatalogue();
   assert.equal(result.packs, 3);
-  assert.equal(result.items, 26);
+  assert.equal(result.items, 50);
 });
 
 test("validates Bizsuite-supported numeric barcode formats", () => {
