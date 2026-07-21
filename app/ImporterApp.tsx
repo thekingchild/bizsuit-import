@@ -53,6 +53,7 @@ function FieldHint({ children }: { children: React.ReactNode }) {
 export function ImporterApp() {
   const [products, setProducts] = useState<Product[]>([createProduct()]);
   const [draftReady, setDraftReady] = useState(false);
+  const [isPhoneSizedTouchDevice, setIsPhoneSizedTouchDevice] = useState(false);
   const [saveState, setSaveState] = useState<"saved" | "saving">("saved");
   const [selectedId, setSelectedId] = useState<string | null>(null);
   const [filter, setFilter] = useState<RowFilter>("all");
@@ -66,6 +67,14 @@ export function ImporterApp() {
   const [notice, setNotice] = useState<string | null>(null);
   const [busy, setBusy] = useState(false);
   const fileInput = useRef<HTMLInputElement>(null);
+
+  useEffect(() => {
+    const mediaQuery = window.matchMedia("(max-width: 900px) and (hover: none) and (pointer: coarse)");
+    const updateDeviceState = () => setIsPhoneSizedTouchDevice(mediaQuery.matches);
+    updateDeviceState();
+    mediaQuery.addEventListener("change", updateDeviceState);
+    return () => mediaQuery.removeEventListener("change", updateDeviceState);
+  }, []);
 
   useEffect(() => {
     loadDraft()
@@ -322,6 +331,55 @@ export function ImporterApp() {
   }
 
   const completion = totals.total ? Math.round((totals.ready / totals.total) * 100) : 0;
+
+  if (isPhoneSizedTouchDevice) {
+    return (
+      <div className="mobile-gate">
+        <div className="mobile-gate__backdrop" />
+        <section className="mobile-gate__card" aria-labelledby="mobile-gate-title">
+          <div className="mobile-gate__brand">
+            <span className="brand-mark">B</span>
+            <div>
+              <strong>Bizsuite Import Assistant</strong>
+              <span>Desktop workspace for large product imports</span>
+            </div>
+          </div>
+
+          <div className="mobile-gate__hero">
+            <div className="mobile-gate__device">
+              <span />
+            </div>
+            <p className="eyebrow">DESKTOP REQUIRED</p>
+            <h1 id="mobile-gate-title">This import workspace is currently limited on phones.</h1>
+            <p>
+              Large catalogue imports, spreadsheet parsing, and preflight validation can be slow or unstable on most mobile phones.
+              To protect performance and prevent data loss, this tool is available on desktop and larger tablets only.
+            </p>
+          </div>
+
+          <div className="mobile-gate__grid" aria-label="Why desktop is required">
+            <article>
+              <strong>Large files</strong>
+              <span>Imports can contain hundreds or thousands of products with local parsing and validation.</span>
+            </article>
+            <article>
+              <strong>Safer editing</strong>
+              <span>Desktop gives better control for column mapping, detailed product editing, and bulk review.</span>
+            </article>
+            <article>
+              <strong>Lower crash risk</strong>
+              <span>Phones are more likely to run out of memory during heavy workbook and template operations.</span>
+            </article>
+          </div>
+
+          <div className="mobile-gate__footer">
+            <strong>Recommended next step</strong>
+            <p>Open this application on a laptop, desktop, or a larger tablet in landscape mode.</p>
+          </div>
+        </section>
+      </div>
+    );
+  }
 
   return (
     <div className="app-shell">
